@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Category, IceCream, Topping, Wrapper
 
+admin.site.empty_value_display = 'Не задано'
 
 class IceCreamAdmin(admin.ModelAdmin):
     list_display = (
@@ -38,5 +39,4 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(IceCream, IceCreamAdmin)
 admin.site.register(Topping)
 admin.site.register(Wrapper)
-admin.site.empty_value_display = 'Не задано'
 
